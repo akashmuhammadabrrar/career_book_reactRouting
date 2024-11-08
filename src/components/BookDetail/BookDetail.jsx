@@ -1,6 +1,7 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { addToStoredReadList } from "../../Utilities/addToDb";
+import { Helmet } from "react-helmet-async";
 
 const BookDetail = () => {
   const { bookId } = useParams();
@@ -35,6 +36,9 @@ const BookDetail = () => {
 
   return (
     <div className="hero bg-base-200 min-h-screen mt-24 mb-12">
+      <Helmet>
+        <title>Book detail | {bookName}</title>
+      </Helmet>
       <div className="hero-content flex-col lg:flex-row">
         <img src={image} className="max-w-sm rounded-lg shadow-2xl w-56" />
         <div>

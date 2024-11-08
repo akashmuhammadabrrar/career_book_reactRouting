@@ -6,6 +6,7 @@ import { getStoredReadList } from "../../Utilities/addToDb";
 // import Book from "../Book/Book";
 import ReadListDetail from "../ReadListDetail/ReadListDetail";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
+import { Helmet } from "react-helmet-async";
 
 const ListedBooks = () => {
   const [sort, setSort] = useState("");
@@ -49,6 +50,9 @@ const ListedBooks = () => {
 
   return (
     <div className="mt-10 mb-10">
+      <Helmet>
+        <title>EKRAH | Listed Books</title>
+      </Helmet>
       <h3 className="text-3xl my-8 text-center bg-slate-100 p-6">
         Listed Books
       </h3>

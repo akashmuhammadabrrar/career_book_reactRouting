@@ -10,6 +10,7 @@ import BookDetail from "./components/BookDetail/BookDetail";
 import ListedBooks from "./components/ListedBooks/ListedBooks";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { HelmetProvider } from "react-helmet-async";
 
 // create react router
 const router = createBrowserRouter([
@@ -43,7 +44,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-    <ToastContainer></ToastContainer>
+    <HelmetProvider>
+      <RouterProvider router={router}></RouterProvider>
+      <ToastContainer></ToastContainer>
+    </HelmetProvider>
   </React.StrictMode>
 );
